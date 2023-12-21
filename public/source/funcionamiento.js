@@ -12,4 +12,3 @@ function toggleMenu() {
   menu.classList.toggle('menu-open');
   console.log("Estado de menu-open:", menu.classList.contains('menu-open'));
 }
-
