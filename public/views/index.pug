@@ -15,7 +15,7 @@ html(lang='es')
         include ../assets/elementos/menu.pug
       main
         .background
-          section#inicio
+          section.box
             .cabecera
               .foto
                 img(src='assets/images/yo.png', alt='Softliman')
@@ -23,7 +23,8 @@ html(lang='es')
                 h1 David Soliman Escobar
                 p Desarrollador Polifacético Fullstack
                 include ../assets/elementos/contacto.pug
-            //include contenido/presentacion.pug
+          section.box
+            include contenido/presentacion.pug
       footer#footer
         include ../assets/elementos/footer.pug
         include ../assets/elementos/contacto.pug
