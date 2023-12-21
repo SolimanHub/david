@@ -1,0 +1,33 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title David Soliman
+    link(rel='stylesheet', href='styles/styles.css')
+    link(rel='stylesheet', href='styles/background.css')
+    link(rel='icon', href='/david/recursos/iconos/softliman.png', type='image/x-icon')
+    link(rel='shortcut icon', href='assets/icons/softliman.png', type='image/x-icon')
+  body
+    .container
+      header#header.scroll-top
+        include ../assets/menu.pug
+      main
+        .background
+
+
+
+          section#inicio
+            //include contenido/presentacion.pug
+            .cabecera
+              .foto
+                img(src='assets/images/yo.png', alt='Softliman')
+              .info
+                h1 David Soliman Escobar
+                p Desarrollador Polifacético Fullstack
+                .botones
+                  a.btn(href='ruta/a/tu/cv.pdf') Descargar CV
+                  a.btn(href='contacto.html') Contáctame
+      footer#footer
+        include ../assets/footer.pug
+    script(src='source/funcionamiento.js')

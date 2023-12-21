@@ -1,0 +1,258 @@
+:root {
+  --color-principal-oscuro: rgb(125, 200, 176); 
+  --color-principal-claro: rgb(126, 232, 206); 
+  --color-lectura: rgb( 188, 201, 197); 
+  --color-hover: #e1e2e3; 
+  --color-texto: #333; 
+  --color-cajas-texto: rgba(249, 249, 249, 0.9);
+}
+body {
+  background-color: var(--color-lectura);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+/*000000000000000000000000000*/
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.cabecera .foto img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  background-color: var(--color-principal-oscuro);
+}
+
+.cabecera .info {
+  text-align: left;
+}
+
+.cabecera .info h1 {
+  margin: 0;
+  color: var(--color-texto);
+}
+
+.cabecera .info p {
+  color: var(--color-texto);
+}
+
+.cabecera .botones {
+  margin-top: 20px;
+}
+
+.cabecera .botones .btn {
+  text-decoration: none;
+  color: var(--color-texto);
+  background-color: var(--color-principal-oscuro);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.cabecera .botones .btn:hover {
+  background-color: var(--color-hover);
+  color: black;
+  font-size: calc(100% + 5%);
+  font-weight: bold;
+}
+
+.background{
+  z-index: 1;
+  background-image: url('../assets/icons/softliman.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: auto; 
+}
+.container {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0 10%;
+}
+main {
+  flex: 1;
+}
+header {
+  background-color: var(--color-principal-oscuro);
+  border-radius: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  margin-top: 10px;
+  padding: 0.3em;
+  position: sticky;
+  top: 0;
+  transition: border-radius 0.4s ease;
+}
+.scroll-top {
+  border-radius: 15px; 
+  padding: 1em;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-texto); 
+  padding: 0.5em;
+  border-radius: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+nav a:hover {
+  background-color: var(--color-hover);
+  color: black;
+  font-size: calc(100% + 5%);
+  font-weight: bold;
+}
+section {
+  padding: 20px;
+}
+/* Estilos específicos para cada sección */
+#inicio {
+  background-color: var(--color-cajas-texto);
+  text-align: center;
+  padding: 40px; 
+  margin: 20px 0; 
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+#inicio h1 {
+  color: var(--color-texto); 
+}
+#inicio p {
+  color: #555; 
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+}
+#inicio p:last-child {
+  margin-bottom: 0; 
+}
+#inicio p:first-child {
+  font-size: 1.2em; 
+  font-weight: bold; 
+}
+footer {
+  background-color: var(--color-principal-oscuro); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  padding: 1em;
+  margin: 0 0 10px;
+  border-radius: 15px;
+}
+.logo{
+  display: none;
+}
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .container{
+    margin: 10px;
+
+  }
+  .cabecera {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cabecera .foto img {
+    max-width: 120px; /* Tamaño más pequeño para la imagen */
+  }
+  .cabecera .info h1, .cabecera .info p {
+    margin-top: 10px;
+    text-align:center;
+  }
+  .cabecera .botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cabecera .botones .btn {
+    margin-bottom: 10px; /* Espacio entre los botones */
+    text-align:center;
+    width: 80%; /* Botones más anchos para una mejor interacción táctil */
+  }
+  /*000000000000000*/
+  .background {
+  z-index: 1;
+  background-position: center top;
+  background-size: 90%; 
+  }
+  .menu {
+  display: none;
+  order: 1;
+  }
+  .logo {
+  display: flex;
+  align-items: center;
+  order: 2;
+  margin-left: auto; 
+  margin-right: 20px; 
+  }
+  .logo img {
+  width: 30px; 
+  height: 30px; 
+  }
+  /* Mostramos el botón de menú hamburguesa */
+  .menu-icon {
+  display: block;
+  cursor: pointer;
+  float: right;
+  }
+  /* Estilizamos el botón de menú hamburguesa */
+  .menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+  }
+  /* Animación para transformar las barras en una cruz al abrir el menú */
+  .menu-open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .menu-open .bar:nth-child(2) {
+  opacity: 0;
+  }
+  .menu-open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /* Mostramos el menú al abrirlo */
+  .menu-open .menu {
+  display: block;
+  }
+  .menu li {
+  display: block;
+  margin: 10px 0;
+  font-size: 2rem;
+  }
+  nav a:hover {
+  background-color: var(--color-hover);
+  color: black;
+  font-size: calc(100% + 5%);
+  font-weight: bold;
+  }
+  #inicio {
+    background-color: var(--color-cajas-texto);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cabecera .foto img {
+    max-width: 100px; /* Tamaño aún más pequeño para la imagen */
+  }
+
+  .cabecera .botones .btn {
+    text-align:center;
+    width: 90%; /* Botones aún más anchos para pantallas más pequeñas */
+  }
+}
