@@ -12,11 +12,10 @@ html(lang='es')
   body
     .container
       header#header.scroll-top
-        include ../assets/menu.pug
+        include ../assets/elementos/menu.pug
       main
         .background
           section#inicio
-            //include contenido/presentacion.pug
             .cabecera
               .foto
                 img(src='assets/images/yo.png', alt='Softliman')
@@ -25,15 +24,9 @@ html(lang='es')
                 p Desarrollador Polifacético Fullstack
                 .botones
                   a.btn(href='ruta/a/tu/cv.pdf') Descargar CV
-                .contacto
-                  a(href='tu-link-whatsapp', target='_blank')
-                    i.fa-brands.fa-whatsapp
-                  a(href='tu-link-linkedin', target='_blank')
-                    i.fa-brands.fa-linkedin
-                  a(href='tu-link-github', target='_blank')
-                    i.fa-brands.fa-github
-                  a(href='tu-link-gitlab', target='_blank')
-                    i.fa-brands.fa-gitlab
+                include ../assets/elementos/contacto.pug
+            include contenido/presentacion.pug
       footer#footer
-        include ../assets/footer.pug
+        include ../assets/elementos/footer.pug
+        include ../assets/elementos/contacto.pug
     script(src='source/funcionamiento.js')
