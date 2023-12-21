@@ -8,15 +8,13 @@ html(lang='es')
     link(rel='stylesheet', href='styles/background.css')
     link(rel='icon', href='/david/recursos/iconos/softliman.png', type='image/x-icon')
     link(rel='shortcut icon', href='assets/icons/softliman.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css')
   body
     .container
       header#header.scroll-top
         include ../assets/menu.pug
       main
         .background
-
-
-
           section#inicio
             //include contenido/presentacion.pug
             .cabecera
@@ -27,7 +25,15 @@ html(lang='es')
                 p Desarrollador Polifacético Fullstack
                 .botones
                   a.btn(href='ruta/a/tu/cv.pdf') Descargar CV
-                  a.btn(href='contacto.html') Contáctame
+                .contacto
+                  a(href='tu-link-whatsapp', target='_blank')
+                    i.fa-brands.fa-whatsapp
+                  a(href='tu-link-linkedin', target='_blank')
+                    i.fa-brands.fa-linkedin
+                  a(href='tu-link-github', target='_blank')
+                    i.fa-brands.fa-github
+                  a(href='tu-link-gitlab', target='_blank')
+                    i.fa-brands.fa-gitlab
       footer#footer
         include ../assets/footer.pug
     script(src='source/funcionamiento.js')
