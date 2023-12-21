@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e -u
+
+echo "Checking for newer files online first"
+git pull
+
+git add --all .
+
+echo "####################################"
+echo "Write your commit comment!"
+echo "####################################"
+
+read input
+
+git commit -m "$input"
+
+git push
+
+echo "################################################################"
+echo "###################    Git Push Done      ######################"
+echo "################################################################"
