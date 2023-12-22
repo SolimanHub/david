@@ -1,0 +1,21 @@
+[
+  {
+    "nombre": "Turnos",
+    "descripcion": "Sistema de control de colas utilizado para gestionar y reducir las colas de espera en diferentes ámbitos, como bancos, tiendas, oficinas gubernamentales y hospitales.",
+    "imagen": "https://turnos.hn/assets/svg/logos/logo.svg",
+    "url": "https://turnos.hn"
+  },
+  {
+    "nombre": "Cocina",
+    "descripcion": "Este sistema sofisticado maneja de manera eficiente el control de los alimentos producidos y distribuidos en las diversas cocinas y oficinas de la Policia Naciona de Honduras. Su funcionalidad clave incluye el monitoreo detallado de los insumos, la producción alimenticia y la logística de distribución, asegurando así una gestión efectiva y una distribución oportuna de los alimentos.",
+    "imagen": "https://www.sepol.hn/cocina/recursos/pnlogo.png",
+    "url": "https://www.sepol.hn/cocina"
+  },
+  {
+    "nombre": "WanderoS",
+    "descripcion": "Wanderos es un sistema operativo innovador basado en ArchLinux, diseñado específicamente para desarrolladores que buscan un entorno de trabajo eficiente y libre de configuraciones prolongadas. Este sistema destaca por su interfaz i3wm personalizada, complementada con Polybar, y su uso de Neovim como editor principal, lo que lo posiciona como una distribución ideal para usuarios con experiencia avanzada. Wanderos combina funcionalidad avanzada y facilidad de uso para maximizar la productividad del desarrollador.",
+    "imagen": "https://avatars.githubusercontent.com/u/30937672?v=4",
+    "url": "https://github.com/SolimanHub/WanderoS"
+  }
+]
+

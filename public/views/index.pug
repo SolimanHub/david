@@ -23,6 +23,19 @@ html(lang='es')
                 h1 David Soliman Escobar
                 p Desarrollador Polifacético Fullstack
                 include ../assets/elementos/contacto.pug
+
+          section.box
+            h2 Mis Proyectos
+            .galeria-proyectos
+              each proyecto in proyectos
+                .proyecto
+                  img(src=proyecto.imagen, alt=proyecto.nombre)
+                  h3= proyecto.nombre
+                  p= proyecto.descripcion
+                  a(href=proyecto.url, target='_blank') Ver Proyecto
+
+
+
           section.box
             include contenido/presentacion.pug
       footer#footer

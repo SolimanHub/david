@@ -12,3 +12,20 @@ function toggleMenu() {
   menu.classList.toggle('menu-open');
   console.log("Estado de menu-open:", menu.classList.contains('menu-open'));
 }
+fetch('../assets/elementos/proyecotos.json')
+  .then(response => response.json())
+  .then(proyectos => {
+    const galeria = document.querySelector('.galeria-proyectos');
+    proyectos.forEach(proyecto => {
+      galeria.innerHTML += `
+        <div class="proyecto">
+          <img src="${proyecto.imagen}" alt="${proyecto.nombre}">
+          <h3>${proyecto.nombre}</h3>
+          <p>${proyecto.descripcion}</p>
+          <a href="${proyecto.url}" target="_blank">Ver Proyecto</a>
+        </div>
+      `;
+    });
+  })
+  .catch(error => console.log('Error al cargar los proyectos:', error));
+

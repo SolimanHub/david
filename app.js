@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
+const fs = require('fs');
 
 app.use(express.static('public'));
 // Usar el middleware body-parser para parsear el cuerpo de las peticiones JSON
@@ -12,7 +13,15 @@ app.set('view engine', 'pug');
 app.set('views', './public/views');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  //res.render('index');
+  fs.readFile('./public/assets/elementos/proyecotos.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error al leer el archivo de proyectos');
+    }
+    const proyectos = JSON.parse(data);
+    res.render('index', { proyectos: proyectos });
+  });
 });
 
 app.get('/hora', (req, res) => {
