@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 20px;
+  position: unset;
 }
 .cabecera .foto img {
   max-width: 150px;
@@ -37,11 +38,11 @@ body {
   color: var(--color-texto);
 }
 .cabecera .contacto {
-  z-index: 0;
   display: flex;
   justify-content: center;
   margin-top: 20px;
   height: 20px;
+  z-index: 1;
 }
 .cabecera .contacto a {
   margin: 0 10px;
@@ -57,8 +58,6 @@ body {
   width: 30px; /* Ajusta esto según el tamaño deseado */
   height: 30px;
 }
-
-
 .cabecera .botones {
   margin-top: 20px;
   text-align: center;
@@ -98,6 +97,7 @@ main {
   flex: 1;
 }
 header {
+  z-index: 10;
   background-color: var(--color-principal-oscuro);
   border-radius: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
@@ -241,13 +241,12 @@ footer p {
   .container{
     margin: 10px;
   }
-  .cabecera .contacto {
-    font-size: 2em;
-    z-index: 0;
-  }
   .cabecera {
     flex-direction: column;
     text-align: center;
+  }
+  .cabecera .contacto {
+    font-size: 2em;
   }
   .cabecera .foto img {
     max-width: 120px; /* Tamaño más pequeño para la imagen */
