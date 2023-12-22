@@ -1,7 +1,7 @@
 [
   {
     "nombre": "Turnos",
-    "descripcion": "Sistema de control de colas utilizado para gestionar y reducir las colas de espera en diferentes ámbitos, como bancos, tiendas, oficinas gubernamentales y hospitales.",
+    "descripcion": "Este avanzado Sistema de Gestión de Colas está diseñado para optimizar la experiencia de espera en diversos entornos como bancos, comercios, entidades gubernamentales y centros de salud. Su enfoque está en agilizar los procesos y reducir significativamente los tiempos de espera, mejorando así la eficiencia operativa y la satisfacción del cliente. Con una interfaz intuitiva y tecnología de punta, este sistema facilita una gestión fluida y efectiva de las colas, transformando el modo en que las organizaciones manejan el flujo de visitantes.",
     "imagen": "https://turnos.hn/assets/svg/logos/logo.svg",
     "url": "https://turnos.hn"
   },
