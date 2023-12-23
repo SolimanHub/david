@@ -304,6 +304,7 @@ footer p {
   }
   .galeria-proyectos .proyecto p {
     max-height: none;
+    display:block;
     -webkit-line-clamp: none;
   }
   .container{
@@ -406,6 +407,7 @@ footer p {
   }
   .galeria-proyectos .proyecto p {
     max-height: none;
+    display:block;
     -webkit-line-clamp: none;
   }
   .cabecera .foto img {
