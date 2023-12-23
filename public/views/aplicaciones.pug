@@ -1,0 +1,25 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Apps-David Soliman
+    link(rel='stylesheet', href='styles/styles.css')
+    link(rel='stylesheet', href='styles/background.css')
+    link(rel='icon', href='/david/recursos/iconos/softliman.png', type='image/x-icon')
+    link(rel='shortcut icon', href='assets/icons/softliman.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css')
+  body
+    .container
+      header#header.scroll-top
+        include ../assets/elementos/menu.pug
+      main
+        .background
+
+          section.box
+            h2 Aplicaciones
+
+      footer#footer
+        include ../assets/elementos/footer.pug
+        include ../assets/elementos/contacto.pug
+    script(src='source/funcionamiento.js')

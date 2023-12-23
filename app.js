@@ -22,6 +22,21 @@ app.get('/', (req, res) => {
     res.render('index', { proyectos: proyectos });
   });
 });
+app.get('/blog', (req, res) => {
+  res.render('blog');
+});
+app.get('/aplicaciones', (req, res) => {
+  res.render('aplicaciones');
+});
+app.get('/descargas', (req, res) => {
+  res.render('descargas');
+});
+app.get('/galeria', (req, res) => {
+  res.render('galeria');
+});
+app.get('/contacto', (req, res) => {
+  res.render('contacto');
+});
 
 app.get('/hora', (req, res) => {
   let ahora = new Date();
