@@ -13,13 +13,11 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
-/*000000000000000000000000000*/
 .galeria-proyectos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .galeria-proyectos .proyecto {
   background-color: var(--color-hover);
   width: calc(25% - 20px); /* Ajusta esto según el tamaño deseado */
@@ -33,7 +31,6 @@ body {
 .galeria-proyectos .proyecto:hover {
   box-shadow: 0px 0px 10px var(--color-principal-oscuro);
 }
-
 .galeria-proyectos .proyecto img {
   width: 100%;
   height: 250px;
@@ -51,7 +48,6 @@ body {
   80% { transform: translate(-2px, -2px) rotate(1deg); }
   100% { transform: translate(2px, 2px) rotate(-1deg); }
 }
-
 .galeria-proyectos .proyecto h3 {
   color: var(--color-principal-oscuro);
   filter: drop-shadow(2px 2px 4px var(--color-texto));
@@ -70,6 +66,14 @@ body {
   max-height: 80px;
 }
 .galeria-proyectos .proyecto a {
+  text-decoration: none;
+}
+.galeria-proyectos .proyecto .ir-a{
+  display: none;
+  background-color: var(--color-principal-oscuro);
+  color: var(--color-texto);
+  text-align: center;
+  padding: 10px;
   text-decoration: none;
 }
 .cabecera {
@@ -297,7 +301,7 @@ footer p {
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
   .galeria-proyectos .proyecto {
-    width: calc(50% - 20px); /* Ajusta a 2 columnas */
+    width: calc(40%); /* Ajusta a 2 columnas */
   }
   .galeria-proyectos .proyecto h3 {
     filter: drop-shadow(1px 1px 1px var(--color-texto));
@@ -306,6 +310,9 @@ footer p {
     max-height: none;
     display:block;
     -webkit-line-clamp: none;
+  }
+  .galeria-proyectos .proyecto .ir-a{
+    display: block;
   }
   .container{
     margin: 10px;
@@ -316,6 +323,9 @@ footer p {
   }
   .cabecera .contacto {
     font-size: 2em;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: hidden;
   }
   .cabecera .foto img {
     max-width: 120px; /* Tamaño más pequeño para la imagen */

@@ -5,7 +5,6 @@ html(lang='es')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title David Soliman
     link(rel='stylesheet', href='styles/styles.css')
-    link(rel='stylesheet', href='styles/background.css')
     link(rel='icon', href='/david/recursos/iconos/softliman.png', type='image/x-icon')
     link(rel='shortcut icon', href='assets/icons/softliman.png', type='image/x-icon')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css')
@@ -26,7 +25,7 @@ html(lang='es')
                 include ../assets/elementos/contacto.pug
 
           section.box
-            h2 Mis Proyectos
+            h2 Proyectos
             .galeria-proyectos
               each proyecto in proyectos
                 .proyecto
@@ -35,10 +34,9 @@ html(lang='es')
                   a(href=proyecto.url, target='_blank') 
                     h3= proyecto.nombre
                   p= proyecto.descripcion
+                  a.ir-a(href=proyecto.url, target='_blank') Ver proyecto
 
 
-          section.box
-            include contenido/presentacion.pug
       footer#footer
         include ../assets/elementos/footer.pug
         include ../assets/elementos/contacto.pug

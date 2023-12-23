@@ -13,7 +13,7 @@ app.set('view engine', 'pug');
 app.set('views', './public/views');
 
 app.get('/', (req, res) => {
-  fs.readFile('./public/assets/elementos/proyecotos.json', 'utf8', (err, data) => {
+  fs.readFile('./public/assets/elementos/proyectos.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       return res.status(500).send('Error al leer el archivo de proyectos');
