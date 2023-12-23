@@ -13,7 +13,6 @@ app.set('view engine', 'pug');
 app.set('views', './public/views');
 
 app.get('/', (req, res) => {
-  //res.render('index');
   fs.readFile('./public/assets/elementos/proyecotos.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
@@ -36,7 +35,6 @@ app.post("/enviar", function(req, res) {
     const nombre = req.body.nombre;
     const apellido = req.body.apellido;
     let mensaje="";
-
     // Crear un mensaje con el nombre y el apellido recibidos
     if(!nombre || !apellido){
       mensaje = "Error en los datos.";

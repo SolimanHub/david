@@ -22,11 +22,10 @@ body {
 
 .galeria-proyectos .proyecto {
   background-color: var(--color-hover);
-  width: calc(33% - 20px); /* Ajusta esto según el tamaño deseado */
+  width: calc(25% - 20px); /* Ajusta esto según el tamaño deseado */
   margin: 10px;
   padding: 1em;
   box-shadow: 0px 0px 10px var(--color-cajas-texto);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
   border-radius: 10px;
   overflow: hidden;
   transition: background-color 0.3s;
@@ -37,7 +36,20 @@ body {
 
 .galeria-proyectos .proyecto img {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.1s linear;
+}
+.galeria-proyectos .proyecto img:hover {
+  animation: vibrate 0.5s linear infinite;
+}
+@keyframes vibrate {
+  0% { transform: translate(2px, 2px) rotate(0); }
+  20% { transform: translate(-2px, 2px) rotate(1deg); }
+  40% { transform: translate(2px, -2px) rotate(1deg); }
+  60% { transform: translate(-2px, -2px) rotate(0); }
+  80% { transform: translate(-2px, -2px) rotate(1deg); }
+  100% { transform: translate(2px, 2px) rotate(-1deg); }
 }
 
 .galeria-proyectos .proyecto h3 {
@@ -45,29 +57,21 @@ body {
   filter: drop-shadow(2px 2px 4px var(--color-texto));
   margin: 0.5em;
 }
-
 .galeria-proyectos .proyecto p {
   color: var(--color-texto);
   font-size: 0.8em;
   padding: 0 0.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 80px;
 }
-
 .galeria-proyectos .proyecto a {
-  display: block;
-  background-color: var(--color-principal-oscuro);
-  color: var(--color-texto);
-  text-align: center;
-  padding: 10px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease, border-radius 0.3s;
 }
-.galeria-proyectos .proyecto a:hover {
-  background-color: var(--color-principal-claro);
-  color: var(--color-texto);
-  font-size: 1.2em;
-  border-radius: 0.5em;
-}
-
 .cabecera {
   display: flex;
   align-items: center;
@@ -295,6 +299,13 @@ footer p {
   .galeria-proyectos .proyecto {
     width: calc(50% - 20px); /* Ajusta a 2 columnas */
   }
+  .galeria-proyectos .proyecto h3 {
+    filter: drop-shadow(1px 1px 1px var(--color-texto));
+  }
+  .galeria-proyectos .proyecto p {
+    max-height: none;
+    -webkit-line-clamp: none;
+  }
   .container{
     margin: 10px;
   }
@@ -389,6 +400,13 @@ footer p {
 @media screen and (max-width: 480px) {
   .galeria-proyectos .proyecto {
     width: calc(100% - 20px); /* Ajusta a 1 columna */
+  }
+  .galeria-proyectos .proyecto h3 {
+    filter: drop-shadow(1px 1px 2px var(--color-texto));
+  }
+  .galeria-proyectos .proyecto p {
+    max-height: none;
+    -webkit-line-clamp: none;
   }
   .cabecera .foto img {
     max-width: 100px; /* Tamaño aún más pequeño para la imagen */

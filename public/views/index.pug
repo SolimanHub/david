@@ -29,11 +29,11 @@ html(lang='es')
             .galeria-proyectos
               each proyecto in proyectos
                 .proyecto
-                  img(src=proyecto.imagen, alt=proyecto.nombre)
-                  h3= proyecto.nombre
+                  a(href=proyecto.url, target='_blank') 
+                    img(src=proyecto.imagen, alt=proyecto.nombre)
+                  a(href=proyecto.url, target='_blank') 
+                    h3= proyecto.nombre
                   p= proyecto.descripcion
-                  a(href=proyecto.url, target='_blank') Ver Proyecto
-
 
 
           section.box
