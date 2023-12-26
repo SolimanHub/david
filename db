@@ -1,7 +1,7 @@
 apps {
 	id integer pk increments
 	id_user integer
-	author integer
+	author integer *> user.id
 	title varchar(100)
 	description varchar(350)
 	thumbnails varchar(255)
@@ -10,13 +10,26 @@ apps {
 }
 
 gallery {
-    id integer pk increments
-    tags text
-    id_user integer
-    description text
-    title varchar(100)
-    thumbnails text
-    img text
-    is_public boolean def(1)
-    author integer
+	id integer pk increments
+	tags text
+	id_user integer *> user.id
+	description text
+	title varchar(100)
+	thumbnails text
+	img text
+	is_public boolean def(1)
+	author integer
+}
+
+user {
+	id integer pk increments
+	name varchar(50)
+	mail varchar(100)
+}
+
+login {
+	id integer pk increments
+	id_user integer > user.id
+	login varchar(50)
+	pass text
 }
