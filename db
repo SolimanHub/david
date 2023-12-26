@@ -1,0 +1,22 @@
+apps {
+	id integer pk increments
+	id_user integer
+	author integer
+	title varchar(100)
+	description varchar(350)
+	thumbnails varchar(255)
+	tags text
+	is_public boolean def(1)
+}
+
+gallery {
+    id integer pk increments
+    tags text
+    id_user integer
+    description text
+    title varchar(100)
+    thumbnails text
+    img text
+    is_public boolean def(1)
+    author integer
+}
