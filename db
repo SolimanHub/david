@@ -1,7 +1,59 @@
+
+Blog {
+	id integer pk increments
+	title varchar(255)
+	description varchar(350)
+	banner varchar(255)
+	thumbnails varchar(255)
+	content varchar(255)
+	author integer *> Users.id
+	date_post timestamp
+	is_public bool def(false)
+	categoria varchar(255)
+	palabras_clave varchar(255)
+	enlaces text
+	social_media text
+}
+
+Comments {
+	id integer pk increments
+	id_post integer *> Blog.id
+	id_project integer *> Projects.id
+	id_response integer def(0)
+	id_user integer *> Users.id
+	content text
+	date_at timestamp
+	update_at timestamp
+	status integer def(1)
+	nick varchar(20)
+	email varchar(100)
+}
+
+Users {
+	id integer pk increments
+	email varchar(100)
+	nick varchar(50)
+}
+
+Login {
+	id integer pk increments
+	login varchar(50)
+	pass varchar(300)
+	id_user integer > Users.id
+}
+
+Projects {
+	id integer pk increments
+	title varchar(255)
+	url varchar(255)
+	thumbnails varchar(255)
+	description text
+	id_user integer *> Users.id
+}
+
 apps {
 	id integer pk increments
-	id_user integer
-	author integer *> user.id
+	id_user integer *> Users.id
 	title varchar(100)
 	description varchar(350)
 	thumbnails varchar(255)
@@ -12,24 +64,11 @@ apps {
 gallery {
 	id integer pk increments
 	tags text
-	id_user integer *> user.id
+	id_user integer *> Users.id
 	description text
 	title varchar(100)
 	thumbnails text
 	img text
 	is_public boolean def(1)
-	author integer
 }
 
-user {
-	id integer pk increments
-	name varchar(50)
-	mail varchar(100)
-}
-
-login {
-	id integer pk increments
-	id_user integer > user.id
-	login varchar(50)
-	pass text
-}
